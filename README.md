@@ -2,6 +2,7 @@
 
 I) Dockerfile (Docker image Setup)
 
+
 1. specify a base image (including npm in this example)
 
 FROM node:alpine
@@ -12,9 +13,9 @@ COPY ./ ./
 
 3. Install the dependencies
 
-4. RUN npm install
+RUN npm install
 
-Default command when the container start running(start the node server by using our start script)
+4. Default command when the container start running(start the node server by using our start script)
 
 CMD ["npm", "start"]
 
@@ -25,9 +26,11 @@ II) Build the image ( . stands for the context)
 Docker build .
 
 
+
 III) Tag the container(more handy than using container ids)
 
 docker build -t qroux/docker_node .
+
 
 
 IV) Maping local port to container ports (Container have its own ports, you have to explicitly map machine ports to container ports)
