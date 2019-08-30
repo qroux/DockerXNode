@@ -2,17 +2,21 @@
 
 1) Dockerfile (Docker image Setup)
 
-# specify a base image (including npm in this example)
+specify a base image (including npm in this example)
+
 FROM node:alpine
 
-# Add local files of the directory with the COPY command(path of the file relativly to the context, desired path in the image)
-# in this example, we are adding a copy of the package.json file before running npm install command
+Add local files of the directory with the COPY command(path of the file relativly to the context, desired path in the image)
+in this example, we are adding a copy of the package.json file before running npm install command
+
 COPY ./ ./
 
-# Install the dependencies
+Install the dependencies
+
 RUN npm install
 
-# Default command when the container start running(start the node server by using our start script)
+Default command when the container start running(start the node server by using our start script)
+
 CMD ["npm", "start"]
 
 
