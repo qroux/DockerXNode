@@ -42,7 +42,7 @@ docker run -p 8080:8080  qroux/docker_node
 
 docker run -it  qroux/docker_node sh
 
-# Optionnal: when rebuilding after a minor change, it's better to split the COPY instruction into several instruction in order to let docker use the cache insted of re-running npm install.
+# Optionnal: when rebuilding after a minor change, it's better to split the COPY instruction into several instructions in order to let docker use the cache instead of re-running npm install.
 
 In this example, we only need the package.json to run the "RUN npm install".
 
