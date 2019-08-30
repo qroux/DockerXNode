@@ -47,11 +47,15 @@ docker run -it  qroux/docker_node sh
 In this example, we only need the package.json to run the "RUN npm install".
 
 instead of:
+
 COPY ./ ./usr/app
 
 use:
+
 COPY ./package.json ./usr/app
+
 RUN npm install
+
 COPY ./ ./usr/app
 
 
