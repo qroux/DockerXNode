@@ -1,6 +1,6 @@
 # DockerXNode
 
-I) Dockerfile (Docker image Setup)
+# I) Dockerfile (Docker image Setup)
 
 
 1. specify a base image (including npm in this example)
@@ -21,20 +21,25 @@ CMD ["npm", "start"]
 
 
 
-II) Build the image ( . stands for the context)
+# II) Build the image ( . stands for the context)
 
 Docker build .
 
 
 
-III) Tag the container(more handy than using container ids)
+# III) Tag the container(more handy than using container ids)
 
 docker build -t qroux/docker_node .
 
 
 
-IV) Maping local port to container ports (Container have its own ports, you have to explicitly map machine ports to container ports)
+# IV) Maping local port to container ports (Container have its own ports, you have to explicitly map machine ports to container ports)
 
 docker run -p 8080:8080  qroux/docker_node
+
+# Optionnal: command to override the initial command ("npm start") and launch the shell instead
+
+docker run -it  qroux/docker_node sh
+
 
 
